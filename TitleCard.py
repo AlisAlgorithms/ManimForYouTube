@@ -15,8 +15,8 @@ class TitleCard(Scene):
         arabic_alg = Text( " ا ", font_size=200, font="KufiStandardGK").set_color(BLACK).shift(0.7 * LEFT)
         japanese_Ali = Text("亜", font_size=120, weight="ULTRAHEAVY").set_color(BLACK).shift(0.7 * UP)
         japanese_alg = Text("ア", font_size=120, weight="ULTRAHEAVY").set_color(BLACK).shift(1.0 * DOWN)
-        eng_Ali = Text("A", font_size=200, font="Akshar", weight="ULTRAHEAVY").set_color(BLACK).shift(0.3 * LEFT, 0.0 * UP)
-        eng_alg = Text("A", font_size=130, font="Akshar", weight="ULTRAHEAVY").set_color(BLACK).shift(0.6 * RIGHT, 0.2 * UP)
+        eng_Ali = Text("A", font_size=160, font="Futura").set_color(BLACK).shift(0.4 * LEFT, 0.1 * UP)
+        eng_alg = Text("A", font_size=160, font="Futura").set_color(BLACK).shift(0.4 * RIGHT, 0.1 * UP)
         
         self.play(FadeIn(circle))
         self.play(Write(arabic_Ali),
