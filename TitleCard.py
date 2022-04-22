@@ -1,8 +1,3 @@
-from manim import *
-
-config.media_width = "75%"
-config.verbosity = "WARNING"
-
 %%manim -v WARNING --disable_caching -qh TitleCard
 
 config.media_width = "100%"
@@ -11,10 +6,10 @@ config.media_width = "100%"
 class TitleCard(Scene):
     def construct(self):
         circle = Circle().scale(2.1).set_fill(WHITE, opacity=1).set_stroke(BLACK)
-        arabic_Ali = Text(" ع  ", font_size=200, font="KufiStandardGK").set_color(BLACK).shift(0.3 * RIGHT, 0.0 * UP)
-        arabic_alg = Text( " ا ", font_size=200, font="KufiStandardGK").set_color(BLACK).shift(0.7 * LEFT)
-        japanese_Ali = Text("亜", font_size=120, weight="ULTRAHEAVY").set_color(BLACK).shift(0.7 * UP)
-        japanese_alg = Text("ア", font_size=120, weight="ULTRAHEAVY").set_color(BLACK).shift(1.0 * DOWN)
+        arabic_Ali = MarkupText(b'\xd8\xb9'.decode('utf8'), font_size=200, font="KufiStandardGK").set_color(BLACK).shift(0.3 * RIGHT, 0.0 * UP)
+        arabic_alg = MarkupText(b'\xd8\xa7'.decode('utf8'), font_size=200, font="KufiStandardGK").set_color(BLACK).shift(0.7 * LEFT)
+        japanese_Ali = Text(b'\xe4\xba\x9c'.decode('utf8'), font_size=120, weight="ULTRAHEAVY").set_color(BLACK).shift(0.7 * UP)
+        japanese_alg = Text(b'\xe3\x82\xa2'.decode('utf8'), font_size=120, weight="ULTRAHEAVY").set_color(BLACK).shift(1.0 * DOWN)
         eng_Ali = Text("A", font_size=160, font="Futura").set_color(BLACK).shift(0.4 * LEFT, 0.1 * UP)
         eng_alg = Text("A", font_size=160, font="Futura").set_color(BLACK).shift(0.4 * RIGHT, 0.1 * UP)
         
